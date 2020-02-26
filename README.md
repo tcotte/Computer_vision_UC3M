@@ -393,9 +393,9 @@ There are three levels of image analysis :
 
 Semantic segmentation is used for autonomous vehicles experimentations (like cars and drones) because, in comparison with object detection, it can give more accurate pixel-wise extraction results. An other reason is the fact that it is difficult to draw a bounding box surrounding the road in real-time, it is easier and more accurate to overlay a color class to highlight it.
 
-<center>
-<img align="center" src="https://miro.medium.com/max/548/1*OnuIJiFVpy7m83LSCUgi6w.png" width=400></img>
-</center>
+<p align="center">
+<img align="center" src="https://miro.medium.com/max/548/1*OnuIJiFVpy7m83LSCUgi6w.png" width=600></img>
+</p>
 
 Semantic segmentation is different from instance segmentation which is that different objects of the same class will have different labels as in person1, person2 and hence different colours. The picture below very crisply illustrates the difference between instance and semantic segmentation.
 
