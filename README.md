@@ -263,12 +263,12 @@ After reading the picture, we load an *.xml* cascade file from the OpenCV librar
 Then, the *.CascadeClassifier.detectMultiScale* function detects objects and returns them as a list of rectangles. Ths function needs a grayscale picture as input (so we made the conversion). The *.CascadeClassifier.detectMultiScale* detects faces and  return rectangle like the blue square (for any faces) as you can see beneath :
 
 <p align="center">
-<img align="center" src="/Photo/Capture_schema.PNG" width=200></img>
+<img align="center" src="/Photo/Capture_schema.PNG" width=250></img>
 </p>
 
 This method helps us to draw a rectangle around all the faces on the initial color picture. The result is very fast and accurate (HAAR classifiers are accurate at 95%) :
 <p align="center">
-<img align="center" src="/Photo/Image_jompy.jpg" width=400></img>
+<img align="center" src="/Photo/Image_jompy.jpg" width=450></img>
 </p>
 When this was made, I had to adapt a little bit the code to take a photo and return a "face detection image" when I executed the program. I have also tried other classifiers to detect other things (like eyes, arms ...) to experiment OpenCV and really integrate this classifier notion. 
 
@@ -293,15 +293,15 @@ To use this device with the Rasbperry Pi, I had to install OpenVINO. OpenVINO en
 ### Introduction to neural network
 
 Neural networks are an interconnected collection of nodes called **neurons** or **perceptrons**. A neuron is a simple binary classification algorithm. It helps to divide a set of input signals into two parts—“yes” and “no” (binary system). 
-<center>
+<p align="center">
 <img align="center" src="https://missinglink.ai/wp-content/uploads/2018/11/Frame-3.png" style="center"></img>
-</center>
+</p>
 
 A perceptron is a very simple learning machine. It can take in a few inputs, each of which has a weight to signify how important it is, and generate an output decision of “0” or “1”. However, when combined with many other perceptrons, it forms an **artificial neural network**.
 **Neural networks** are an interconnected collection of **neurons layered**. 
-<center>
-<img align="center" src="https://missinglink.ai/wp-content/uploads/2018/11/multilayer-perceptron.png" style="center"></img>
-</center>
+<p align="center">
+<img align="center" src="https://miro.medium.com/max/1000/0*kc5ezjhvABrHjsp-.jpeg" style="center"></img>
+</p>
 
 Each perceptron sends multiple signals, one signal going to each perceptron in the next layer. For each signal, the perceptron uses **different weights**. In the diagram above, every line going from a perceptron in one layer to the next layer represents a **different output**. We are not going to detail the functioning of the layers at the middle of the neural network because it is very complicated. 
 
@@ -413,9 +413,9 @@ When I succeeded to process one image, the next task was to process a video file
 ## Angles of view
 
 Thanks to the drone equipped by a camera, I have made several videos with 3 different angles of view. It is possible with the camera of the Raspberry Pi to change its angle position as you can see below :
-<center>
-<img align="center" src="https://lh3.googleusercontent.com/8lQ9SGYeurwvrCnpjbo6eMchzcYFXHZK6bv94s2jN-y2yfyzKJlVqXRqhQ5Qn7eIbk1lSm-LqH4sKo3d4HMgm21FoMQykq6QFn_Jz7kZhVxHxPTTODxp0IuHYr09U7IB5kZ8mm3Tb9-4drcWgPYdcUjRv_4zalRyhCK34Q1ZVsFhIsKR3shSfutCS8VkIi7Otd933e0irtyS7W7LJ437YB7TguMpd-IK0K458DG2u9QVrskV0eOVnuCRyrjAoKqujQT6GrnFZ_4bHWLlU_ZCEN4D22SrS9QRIn8wPetzLxx7LMQMHP1ogHCIMvXx6G2_E7bGHAjgZSD5URojselNXELFESv_7ZVoGAjl4LtT_JqzyPK1w2znzimKXDPv81IM-Apcneg4vXHzZwFQWyVmu7slLMzwhXpcPMACBAz3lzbySQJ8wkoT_pUX81gBtvQhsnjZ_LJ-o82sNWxB4nlUt7xmfWctgRn2lK2P0OXCrM0PL5vRdVER-K73es81aGvCdd3F9MZ8dAzd6xZaei4TnYNeVQJ0dpmwJF0T2In9fnRf0YfVHH4gAgGEyHLyMSdsjLwrThu26bmNgLBNJDFMughzhPA-pZKLZ6KQ_vNBTnT_jHAtIqPcBDetbsCEfzvur7iXolVjoC47TDarb5UXeWCKqM8uigHk_nQEyCPawurnt0VCSJoZyZAFl5nqLOD1RNodCyFGtLboar8owcZXSxv5HC9MG7dDBdkFoOVil2l0_Q=w489-h562-no" width=300></img>
-</center>
+<p align="center">
+<img align="center" src="https://lh3.googleusercontent.com/8lQ9SGYeurwvrCnpjbo6eMchzcYFXHZK6bv94s2jN-y2yfyzKJlVqXRqhQ5Qn7eIbk1lSm-LqH4sKo3d4HMgm21FoMQykq6QFn_Jz7kZhVxHxPTTODxp0IuHYr09U7IB5kZ8mm3Tb9-4drcWgPYdcUjRv_4zalRyhCK34Q1ZVsFhIsKR3shSfutCS8VkIi7Otd933e0irtyS7W7LJ437YB7TguMpd-IK0K458DG2u9QVrskV0eOVnuCRyrjAoKqujQT6GrnFZ_4bHWLlU_ZCEN4D22SrS9QRIn8wPetzLxx7LMQMHP1ogHCIMvXx6G2_E7bGHAjgZSD5URojselNXELFESv_7ZVoGAjl4LtT_JqzyPK1w2znzimKXDPv81IM-Apcneg4vXHzZwFQWyVmu7slLMzwhXpcPMACBAz3lzbySQJ8wkoT_pUX81gBtvQhsnjZ_LJ-o82sNWxB4nlUt7xmfWctgRn2lK2P0OXCrM0PL5vRdVER-K73es81aGvCdd3F9MZ8dAzd6xZaei4TnYNeVQJ0dpmwJF0T2In9fnRf0YfVHH4gAgGEyHLyMSdsjLwrThu26bmNgLBNJDFMughzhPA-pZKLZ6KQ_vNBTnT_jHAtIqPcBDetbsCEfzvur7iXolVjoC47TDarb5UXeWCKqM8uigHk_nQEyCPawurnt0VCSJoZyZAFl5nqLOD1RNodCyFGtLboar8owcZXSxv5HC9MG7dDBdkFoOVil2l0_Q=w489-h562-no" width=250></img>
+</p>
 
 Because the SS and the SSD models were trained with a dataset with a view angle of 0° (pedestrian view), as the camera angle of view increases, the process degrades.
 
@@ -476,7 +476,7 @@ Figure [1] : https://www.pinterest.com/pin/291959988335451420/
 
 Figure [2] : https://www.pyimagesearch.com/wp-content/uploads/2014/10/sliding_window_example.gif
 
-Figure [3] : [https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/single-shot-detectors.html](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/single-shot-detectors.html)
+Figure [3] : [https://mc.ai/using-artificial-neural-network-for-image-classification/](https://mc.ai/using-artificial-neural-network-for-image-classification/)
 
 
 
