@@ -224,7 +224,7 @@ The *CascadeClassifier* method performs face detection using HAAR feature-based 
 
 A difficulty of the classifer is to to localize exactly *where* in an image an object resides. To localize the Region Of Interest (ROI), the classifers uses a brute force solution named **sliding window**
 <p align="center">
-<img align="center" src="https://www.pyimagesearch.com/wp-content/uploads/2014/10/sliding_window_example.gif" width=250></img>
+<img align="center" src="https://www.pyimagesearch.com/wp-content/uploads/2014/10/sliding_window_example.gif" width=200></img>
 </p>
 
 For each of these windows, we would normally take the window region and apply an *image classifier* (in this case : *haarcascade_frontalface*) to determine if the window has an object that interests us ( in this case, a face).
@@ -260,9 +260,14 @@ cv2.imwrite('Result_image/Classe-de-5e.jpg', image)
 After reading the picture, we load an *.xml* cascade file from the OpenCV library which is already trained to detect faces (it exists several HAAR classifers just to detect faces). 
 Then, the *.CascadeClassifier.detectMultiScale* function detects objects and returns them as a list of rectangles. Ths function needs a grayscale picture as input (so we made the conversion). The *.CascadeClassifier.detectMultiScale* detects faces and  return rectangle like the blue square (for any faces) as you can see beneath :
 
-![Scheme_detection](https://lh3.googleusercontent.com/Gh4mN23ZvG3qZUIg6Zh4zbtLtkJ5uHw6eIJAswMDH2U4NEUwl1In1TspNRR710ElDtsibsStp9Ig1PiKKnnVn5zJ9XRx9H8244s_-NfEi1swwj2vBf5m6s3ZMzlTrYQIB4K2D2cZs4KsN5dXF7GMAM2xCbvyLW_bRPz6ZhFaZer19zbWqHTSavAd-0S_LAAWFmFAHx0f3BwN_ZG85xV-vxPFi7s6pvEz9XxiD0j3WuTnNegdez8CzHZxScdDUnyw05In6XC-W08zSRMaTwgzTAwLq4HroI3iKF8OcKz6Qzug9yMFYO8hvA-oCklTPOCqyTN7p_pdo3HwyemkWa5ozuEbYAkpcZwD0VR6esaJAPP5ZDn7amxXHIyAkKqHE0yRY6N9uouBRCY2B3ulzQsaOhwVgkALl4ug6EwRNs_JEfmKIOBBjlxaYfKdVti90XxpH9k115kSzm9Bel32L7AfO8E1gzoPgMO4blLOnkKUKJ1kXMM3Dxs3A85E6Xu4I_ofQsVy72u4OshwrgYQXUitvbXgztqzTSX3_cyjsJ0WQm0txQL38y126b5r8isM-Ryt-23drDwDGC7aCsYui7JQWtUOUkkyToFBKKRTowNZoc4TvfYF8O-DXroO8SKp-nCCk62rtfHrWXPNO9mR6tGJ5ElNMqCTjNiDk-WNc0l4-7t7b6_ZmSXT=w305-h299-no)
+<p align="center">
+<img align="center" src="/Photo/Capture_schema.PNG" width=200></img>
+</p>
+
 This method helps us to draw a rectangle around all the faces on the initial color picture. The result is very fast and accurate (HAAR classifiers are accurate at 95%) :
-![Face_detection_children](https://lh3.googleusercontent.com/5Blu1qaejI9D3wZbWvK1JJ7-yUtgB-scNInEojP5G91cU4nmbXEyD7RcqZyH_hZhLfZ3kRVGmL3ST19UpWQ8XXM_wLBNr13fzOFFBJ6hN6xRngG8Wq3Dl2eYRZvea-toM1En2qQDvQdC7froYBICnwqLcvA3UuyJzCjR3UtilCF8qpNQ3pwfB8y2YJxn_656slb1aNC37OWjzXviFz0ReQJshI9y0lIEEQguj_2zju2fQQKTYjIJ3LHV7VHHH52S3wZNRcTyxGfFU1E7UPyrUOp4tD6JLtfkAfYERu3DgNBnJzrgS10V2R5xCw3Gu6GE1RyeqdeNCymYTp2Vuh-iah1qWxvaFaZEkSRyzEXOkP-S8KJLpx5Z4644qmvi-ndVOR4IavbyEryZepo2ttg394re3oJZP0TdbjfMD1wFoQdNyWAzA251-4bRX8sGsiL-yo5S9gKEl8FbACOpz3KXBKf8PR6VPDMOLebbEB9JYEpmoiXPlQ6tKHA2DsgkCDSWjCDzhqExljMpXit7-oAp8GNA0f417lI1sGKAhztQGGP46yeuHrTsu6gKmbJkDEtxIZsvBV5Hbtx2b4eukYRqhht10GYybk1ma5PiYlrzkNg87bI5P7WXsF1uEO4U_EzhkhJwwFAtogIqbcTSnj1Nz5gCvCpLokng0t97MMjMDeF7LhVf3zuV=w620-h312-no)
+<p align="center">
+<img align="center" src="/Photo/Image_jompy.jpg" width=400></img>
+</p>
 When this was made, I had to adapt a little bit the code to take a photo and return a "face detection image" when I executed the program. I have also tried other classifiers to detect other things (like eyes, arms ...) to experiment OpenCV and really integrate this classifier notion. 
 
 Before go ahead and speak about other things, I want to make a little conclusion about the classifiers. Classifiers are accurate at 93% (high accuracy) and easy to use (there are great points). Meanwhile, the sliding window is not very efficient (to be efficient the model must have been trained to detect one object at different sizes many times). There is another significant drawback at this method, the classifier can only detect one class, it is just able to say if the picture contains a class (like face) or not. There is not also any precision about detection accuracy.
@@ -317,17 +322,6 @@ When we get all this informations, an OpenCV function helps us to [pass the pict
 
 The **final output** (transmitted by the output layer) is a vector of probabilities, which predicts, for each feature in the image, how likely it is to belong to a class. Usually, the programmer establish a threshold parameter of prediction. If, for one feature, the final output is superior at the threshold parameter, the system signals on the output image that it has recognized something (and maybe the prediction percentage). 
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPkJbTW9kZWxdXG4gICAgQiAtLT5DKCUgcHJlZGljdGlvbiBjbGFzcylcbiAgICBDIC0tPiBEe2lmID4gdGhyZXNob2xkIHZhbHVlfVxuICAgIEQgLS0-fFllc3wgRVtEaXNwbGF5XVxuICAgIEQgLS0-fFR3b3wgRltIaWRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPkJbTW9kZWxdXG4gICAgQiAtLT5DKCUgcHJlZGljdGlvbiBjbGFzcylcbiAgICBDIC0tPiBEe2lmID4gdGhyZXNob2xkIHZhbHVlfVxuICAgIEQgLS0-fFllc3wgRVtEaXNwbGF5XVxuICAgIEQgLS0-fFR3b3wgRltIaWRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
-
-I try to use a Convolution Neural Network model on the Rasbperry Pi thanks to a program which integrates the powerful of the NCS 2. I try to use many models, but this results is related to this model `face-detection-adas-0001` : 
-
-<center>
-<img align="center" src="https://lh3.googleusercontent.com/IICIIGyUZFxazklPYMzzNRl0YcGnEXK2oSw9ZrjV_l3K-J40lqtr3TeGc64_Q9msWHdlHMtdN6R3fIUsDnp8cnYBxxMzXFyAFAeOAM_bQkqXqoVHE8mqKryx6YM4mfeZGAI_SEr1=w1451-h967-no
-" ></img>
-</center>
-
-This program displays the percentage of prediction, and it is possible to change this model to detect other labels like : cars, planes, birds ... Moreover, thanks to the NCS 2, this algorithm is very fast.  
-
 
 
 ## SSD
@@ -343,20 +337,20 @@ The network I have chosen for my utilisation is **MobilNet** (developped by Goog
 
 The SSD is a convolutional neural network which contains an output interpreted as bounding boxes surrounding classes of objects and the detection predictions associated. SSD divides the image using a grid and have each grid cell be responsible for detecting objects in that region of the image. Detection objects simply means predicting the class and location of an object within that region. If no object is present, we consider it as the background class and the location is ignored. For instance, we could use a 13x18 grid in the example below. Each grid cell is able to output the position and shape of the object it contains.
 
-<center>
+<p align="center">
 <img align="center" src="https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/assets/grid.png"
-width="700"></img>
-</center>
+width="500"></img>
+</p>
 
 The grid system is very simple but if we need to detect multiple objects in one grid or object in different shapes we have to use anchor boxes.
 
 #### Anchor boxes
 Each grid cell in SSD can be assigned with multiple anchor/prior boxes. These anchor boxes are pre-defined and each one is responsible for a size and shape within a grid cell. For example, the person in the image below corresponds to the taller anchor box while the car corresponds to the wider box.
 
-<center>
+<p align="center">
 <img align="center" src="https://lh3.googleusercontent.com/5DjYhBVQ8A0nWTSzTAiNCbQQEYfM79fJ29dB6o4Vfhi31tPCMf7h5aJSYt6bdmNdvOXiNYnIogmmb-pawpCqcX52DwGs-NI4dJ4qMvoyFF-SmKl_SQ8TQl3jc-Vx74XdZZyJZ1pQsEP-lKAoHQyb2s314GwwfBrT5nY-2iMD3qOFX71_zcPw3kt5QR08aAESTw5tu1Q2RzKN5Sg4Pu-8GV4eqaTRtIXMhCG4S2jrg-RGmBpZVfwb9gUrWDTvDtBwdLi-1fN1hpl6croz6x-4EYfBSOqy7mBoCYEU901Z-fAwp9hrL2UJv6PeRMVR7Lpavf3q_omJM8Ot8iLOyXHnqKOZq6hBBS_uALPyHMLtykGVmuvfH__km-Hap81-4zqfo5QxHVsBcPfc1KkOPlPzWZrrYvWBaDfLc7jcgVf-6hwGYB02lt2dwsjCkqtNDvIt_bD1j4E6zffZAlkVzObj4Egu6Y_nV4LQ_w7epQd2c-ikOEWn03EDlgceBUI2dIINIQbpw5XHcGALY15CwAyFevsfKPiSgPptGqPn25gObjweYeF68MwmFx4SGWgQF6VVXSxfLocrx-EJ27A-KiEQEXU5G87AZmmQQ08t1ISHKa_D3MaY_1a_Qhs2RvesaQXSLcyBrEid_dxyc0ECLAKCLjjBEJNRr6JnDGoegoGFonoFgUOa3XdIJmfGPnPqAr5nM4HbmMSwzqjgbgG-5DDYZ3abUMD7hPVQp11_nlEKQ5iP_g=w400-h224-no"
 width="500"></img>
-</center>
+</p>
 
 Each anchor box is specified by an aspect ratio and a zoom level.
 
@@ -398,7 +392,7 @@ There are three levels of image analysis :
 Semantic segmentation is used for autonomous vehicles experimentations (like cars and drones) because, in comparison with object detection, it can give more accurate pixel-wise extraction results. An other reason is the fact that it is difficult to draw a bounding box surrounding the road in real-time, it is easier and more accurate to overlay a color class to highlight it.
 
 <center>
-<img align="center" src="https://miro.medium.com/max/548/1*OnuIJiFVpy7m83LSCUgi6w.png"></img>
+<img align="center" src="https://miro.medium.com/max/548/1*OnuIJiFVpy7m83LSCUgi6w.png" width=400></img>
 </center>
 
 Semantic segmentation is different from instance segmentation which is that different objects of the same class will have different labels as in person1, person2 and hence different colours. The picture below very crisply illustrates the difference between instance and semantic segmentation.
