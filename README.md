@@ -477,7 +477,9 @@ We can check various alternative more powerful than the Raspberry Pi on this [li
 ## Bibliography
 
 Figure [1] : https://www.pinterest.com/pin/291959988335451420/
+
 Figure [2] : https://www.pyimagesearch.com/wp-content/uploads/2014/10/sliding_window_example.gif
+
 Figure [3] : [https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/single-shot-detectors.html](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/single-shot-detectors.html)
 
 
