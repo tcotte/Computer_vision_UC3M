@@ -17,11 +17,7 @@ In the context of autonomous drones, the aim of the project is to detect all the
 To recognize classes, one **model** has been trained thanks to a machine learning process. A machine learning model can be a mathematical representation of a real-world process. To generate a machine learning model, it is necessary to provide training data to a **machine learning algorithm** to learn from.
 We can understand the whole computer vision in this scheme :
 
-```mermaid
-graph LR
-    A[Input image]-->B[Model]
-    B -->C(Classes)
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiXG5ncmFwaCBMUlxuICAgIEFbSW5wdXQgaW1hZ2VdLS0-QltNb2RlbF1cbiAgICBCIC0tPkMoQ2xhc3NlcylcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiXG5ncmFwaCBMUlxuICAgIEFbSW5wdXQgaW1hZ2VdLS0-QltNb2RlbF1cbiAgICBCIC0tPkMoQ2xhc3NlcylcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
 
 Recent developments in **neural networks** have greatly advanced the performance of **visual recognition systems**. Visual recognition tasks such as image classification, localization and detection are key components of computer vision. In this report, we are going to present several neural networks techniques which helped me to progress in my project. 
 
@@ -206,14 +202,8 @@ We are going to go continue with a more interesting thing which is face detectio
 to make predictions on new data. Machine Learning is a sub-discipline of artificial  
 intelligence and refers to statistical technique.  
   
-```mermaid  
-graph TD  
-A[Machine learning] -->B(Supervised) 
-A --> C(Unsupervised)
-A --> D(Semi-supervised)
-B --> E(Classification)
-B --> F(Regression)
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVEQgIFxuQVtNYWNoaW5lIGxlYXJuaW5nXSAtLT5CKFN1cGVydmlzZWQpIFxuQSAtLT4gQyhVbnN1cGVydmlzZWQpXG5BIC0tPiBEKFNlbWktc3VwZXJ2aXNlZClcbkIgLS0-IEUoQ2xhc3NpZmljYXRpb24pXG5CIC0tPiBGKFJlZ3Jlc3Npb24pIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVEQgIFxuQVtNYWNoaW5lIGxlYXJuaW5nXSAtLT5CKFN1cGVydmlzZWQpIFxuQSAtLT4gQyhVbnN1cGVydmlzZWQpXG5BIC0tPiBEKFNlbWktc3VwZXJ2aXNlZClcbkIgLS0-IEUoQ2xhc3NpZmljYXRpb24pXG5CIC0tPiBGKFJlZ3Jlc3Npb24pIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+
 We are going to interrest us to Supervised machine learning : it is performed using a collection of samples with the corresponding output values (desired output) for each sample. These machine learning methods are called supervised because we know the correct answer for each training example and the supervised learning algorithm analyzes the training data in order to make predictions on the training data. There are the simplest learning method, since they can be thought of operating with a ‘teacher’, in the form of a function that allows the network to compare their predictions to the true, and desired results.
  
  Supervised learning problems can be further grouped into the following categories:
@@ -277,12 +267,9 @@ When this was made, I had to adapt a little bit the code to take a photo and ret
 
 Before go ahead and speak about other things, I want to make a little conclusion about the classifiers. Classifiers are accurate at 93% (high accuracy) and easy to use (there are great points). Meanwhile, the sliding window is not very efficient (to be efficient the model must have been trained to detect one object at different sizes many times). There is another significant drawback at this method, the classifier can only detect one class, it is just able to say if the picture contains a class (like face) or not. There is not also any precision about detection accuracy.
   
-```mermaid
-graph LR
-    A[Input image]-->|Slidding window|B[Classifier]
-    B -->C(This picture contains face)
-    B -->D(This picture does not contain face)
-```
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPnxTbGlkZGluZyB3aW5kb3d8QltDbGFzc2lmaWVyXVxuICAgIEIgLS0-QyhUaGlzIHBpY3R1cmUgY29udGFpbnMgZmFjZSlcbiAgICBCIC0tPkQoVGhpcyBwaWN0dXJlIGRvZXMgbm90IGNvbnRhaW4gZmFjZSkiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPnxTbGlkZGluZyB3aW5kb3d8QltDbGFzc2lmaWVyXVxuICAgIEIgLS0-QyhUaGlzIHBpY3R1cmUgY29udGFpbnMgZmFjZSlcbiAgICBCIC0tPkQoVGhpcyBwaWN0dXJlIGRvZXMgbm90IGNvbnRhaW4gZmFjZSkiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+
 
 #### On videos
 For the video files, I tried the same code but processing frames by frames. The first time, I tried on the Raspberry Pi and the processing of the video file was long and the system crashed when I executed the script. Veryfying my python script, I was asking me if it was not the limits of the Raspberry Pi. Therefore, I tried to install OpenCV and execute the program on my computer. The script runned perfectly and returned me the *.avi* video file I was waiting. At this moment, I understood that the Raspberry Pi is not able to do computer vision alone and my tutor advice me to use the **Neural Compute Stick 2**.
@@ -329,14 +316,8 @@ When we get all this informations, an OpenCV function helps us to [pass the pict
 `cv2.dnn.blobFromImage(image, scalefactor=1.0, size, mean, swapRB=True)`.
 
 The **final output** (transmitted by the output layer) is a vector of probabilities, which predicts, for each feature in the image, how likely it is to belong to a class. Usually, the programmer establish a threshold parameter of prediction. If, for one feature, the final output is superior at the threshold parameter, the system signals on the output image that it has recognized something (and maybe the prediction percentage). 
-```mermaid
-graph LR
-    A[Input image]-->B[Model]
-    B -->C(% prediction class)
-    C --> D{if > threshold value}
-    D -->|Yes| E[Display]
-    D -->|Two| F[Hide]
-```
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPkJbTW9kZWxdXG4gICAgQiAtLT5DKCUgcHJlZGljdGlvbiBjbGFzcylcbiAgICBDIC0tPiBEe2lmID4gdGhyZXNob2xkIHZhbHVlfVxuICAgIEQgLS0-fFllc3wgRVtEaXNwbGF5XVxuICAgIEQgLS0-fFR3b3wgRltIaWRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPkJbTW9kZWxdXG4gICAgQiAtLT5DKCUgcHJlZGljdGlvbiBjbGFzcylcbiAgICBDIC0tPiBEe2lmID4gdGhyZXNob2xkIHZhbHVlfVxuICAgIEQgLS0-fFllc3wgRVtEaXNwbGF5XVxuICAgIEQgLS0-fFR3b3wgRltIaWRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
 I try to use a Convolution Neural Network model on the Rasbperry Pi thanks to a program which integrates the powerful of the NCS 2. I try to use many models, but this results is related to this model `face-detection-adas-0001` : 
 
@@ -388,22 +369,7 @@ To detect an object, it is not necessary that anchor boxes and grid cells are th
 #### Utilisation
 I used the SSD algorithm with a model which contains **20 classes** and trained through MobilNet architecture . This 20 classes enable at the system to make differences between a man, a car, a tree, a plane ... and not just detect something. We can explain the output image by this chart :
 
-```mermaid
-graph LR
-    A[Input image]-->B[Model]
-    B -->C(% prediction class 1)
-    C --> D{if > threshold value}
-    D -->|Yes| E[Display box + prediction]
-    D -->|No| F[Hide]
-    B -->G(% prediction class 2)
-    G --> H{if > threshold value}
-    H -->|Yes| J[Display box + prediction]
-    H -->|No| L[Hide]
-    B -->M(% prediction class 20)
-    M --> N{if > threshold value}
-    N -->|Yes| O[Display box + prediction]
-    N -->|No| P[Hide]
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPkJbTW9kZWxdXG4gICAgQiAtLT5DKCUgcHJlZGljdGlvbiBjbGFzcyAxKVxuICAgIEMgLS0-IER7aWYgPiB0aHJlc2hvbGQgdmFsdWV9XG4gICAgRCAtLT58WWVzfCBFW0Rpc3BsYXkgYm94ICsgcHJlZGljdGlvbl1cbiAgICBEIC0tPnxOb3wgRltIaWRlXVxuICAgIEIgLS0-RyglIHByZWRpY3Rpb24gY2xhc3MgMilcbiAgICBHIC0tPiBIe2lmID4gdGhyZXNob2xkIHZhbHVlfVxuICAgIEggLS0-fFllc3wgSltEaXNwbGF5IGJveCArIHByZWRpY3Rpb25dXG4gICAgSCAtLT58Tm98IExbSGlkZV1cbiAgICBCIC0tPk0oJSBwcmVkaWN0aW9uIGNsYXNzIDIwKVxuICAgIE0gLS0-IE57aWYgPiB0aHJlc2hvbGQgdmFsdWV9XG4gICAgTiAtLT58WWVzfCBPW0Rpc3BsYXkgYm94ICsgcHJlZGljdGlvbl1cbiAgICBOIC0tPnxOb3wgUFtIaWRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW0lucHV0IGltYWdlXS0tPkJbTW9kZWxdXG4gICAgQiAtLT5DKCUgcHJlZGljdGlvbiBjbGFzcyAxKVxuICAgIEMgLS0-IER7aWYgPiB0aHJlc2hvbGQgdmFsdWV9XG4gICAgRCAtLT58WWVzfCBFW0Rpc3BsYXkgYm94ICsgcHJlZGljdGlvbl1cbiAgICBEIC0tPnxOb3wgRltIaWRlXVxuICAgIEIgLS0-RyglIHByZWRpY3Rpb24gY2xhc3MgMilcbiAgICBHIC0tPiBIe2lmID4gdGhyZXNob2xkIHZhbHVlfVxuICAgIEggLS0-fFllc3wgSltEaXNwbGF5IGJveCArIHByZWRpY3Rpb25dXG4gICAgSCAtLT58Tm98IExbSGlkZV1cbiAgICBCIC0tPk0oJSBwcmVkaWN0aW9uIGNsYXNzIDIwKVxuICAgIE0gLS0-IE57aWYgPiB0aHJlc2hvbGQgdmFsdWV9XG4gICAgTiAtLT58WWVzfCBPW0Rpc3BsYXkgYm94ICsgcHJlZGljdGlvbl1cbiAgICBOIC0tPnxOb3wgUFtIaWRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
 
 I try to used this model for a video on the Raspberry, the device was abler to process 1 frame each 2 seconds (0.5 FPS). I retry to execute the program on the Rasbperry Pi with the NCS plugged-in, the device was able to process 6 frames per seconds ( around 10 times faster). Thanks to this experience we can appreciate the powerful of the VPU in the NCS. Thanks to this processing speed, the device is able to detect classes in "real-time" (not in real time because it stays inferior at 25 FPS but we can see beneath the video is smooth). Therefore, I try to recover a video and process a detection in the same time, it works at 6 FPS. I read in an article that with the Raspberry Pi 3+, it is possible to go until 8,5 FPS. I think it would be very interesting to test this program on a Raspberry Pi 4 equipped with a NCS.
 
@@ -437,15 +403,8 @@ Semantic segmentation is used for autonomous vehicles experimentations (like car
 
 Semantic segmentation is different from instance segmentation which is that different objects of the same class will have different labels as in person1, person2 and hence different colours. The picture below very crisply illustrates the difference between instance and semantic segmentation.
 
-```mermaid
-graph LR
-    A0[Input image]--> A[Pixel n]
-    A --> B[Model]
-    B -->C(prediction class)
-    C -->D(overlay color)
-    D -->|for each pixels| A
-    D --> E(display image + mask)
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBMFtJbnB1dCBpbWFnZV0tLT4gQVtQaXhlbCBuXVxuICAgIEEgLS0-IEJbTW9kZWxdXG4gICAgQiAtLT5DKHByZWRpY3Rpb24gY2xhc3MpXG4gICAgQyAtLT5EKG92ZXJsYXkgY29sb3IpXG4gICAgRCAtLT58Zm9yIGVhY2ggcGl4ZWxzfCBBXG4gICAgRCAtLT4gRShkaXNwbGF5IGltYWdlICsgbWFzaykiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBMFtJbnB1dCBpbWFnZV0tLT4gQVtQaXhlbCBuXVxuICAgIEEgLS0-IEJbTW9kZWxdXG4gICAgQiAtLT5DKHByZWRpY3Rpb24gY2xhc3MpXG4gICAgQyAtLT5EKG92ZXJsYXkgY29sb3IpXG4gICAgRCAtLT58Zm9yIGVhY2ggcGl4ZWxzfCBBXG4gICAgRCAtLT4gRShkaXNwbGF5IGltYWdlICsgbWFzaykiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+
 The semantic segmentation architecture I have used for my project is ENet. The reasons for why I have chosen Enet are simple :  the primary benefits of ENet is that it is very fast  and requiring 79x fewer parameters than larger models. I also try to use an other architecture named VGG 16, it was a little more accurate but 3x slower. In fact, with my computer, I process an image in 0,7 seconds with the Enet model and in 2,2 seconds with a VGG 16 model. With the Enet architecture model, the processing time is not nearly fast enough to make a real-time processing, so we cannot think about the possiblity of implement the VGG 16 architecture model on the Rasbperry Pi. Moreover, this last model works with the framework Keras and it is not compatible with the NCS 2. 
 
 The model chosen was trained with the Cityscape dataset which can be used for urban scene understanding. This particular model was trained with 20 classes. After processed the picture with a semantic segmentation model, I made a little program which prints the colors corresponding to classes on the picture (to help the user to interpret the image) :
