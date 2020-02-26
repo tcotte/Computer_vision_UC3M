@@ -411,16 +411,17 @@ I try to used this model for a video on the Raspberry, the device was abler to p
 
 We have seen that SSD is fast and accurate as 70% which it is not bad enough. The better type of SSD, SSD500 achieves 76.9% mAP at 22 FPS. However, this algorithm also suffers from a notable drawback : the feature does not contain enough spatial information for precise boundary generation. Therefore, it is impossible for this algorithm to detect roads. 
 
-<center>
-<img align="center" src="https://lh3.googleusercontent.com/EzWwKAn4wFoOx2CmFtRG0A1pt4IBSnDImfngNGvEm0HxNMLGRzKegEZ4ggDlt1RxsU3fxC3KSQataQ5CIGy_yosDkeTeelbwoAmaZhhkTpRHYyroAX9MMK4tM5Eb88PttjPylA5CNxpOupEHzdQOyA8-iPBwGwVL5Tq2y3TzUxnU6Ou0Lk8w3V47HRkOHXzZB60U02VFj7iHBLfDO_PRxnFj3_HeSWQihpI-o0sKeOIy7KuwyweEeBN6-khzDR0JI5uzOIVwvfc7OFLjuZ22wyRYce3XVpj9oyaoi3kBD4a_DGjG72XsT6MjEooCz8NaEVRYoGh5kcTtm3kLHJPtvgbfipkTj2xKownxvFEL7RKPkca96pRKRPum3uMLhJ6HpSnqwreHkVt5sovitcB5Yh159wGBXBGq6jRLUgAj0UHRpUKndBu2_4fkwqQRuak9xT7Bq0LPd7WA-iINIKXVB6DGp6dKqipu-Y0MBo1eBWoH62_NHFQ8MGPCjply6Rq4w1v-DbeT31g419EzqgMd81hdF6k6zGqpT3VFv6qaszUWUogWCMIPR6suBW4VjKNkWp0AP_J1d7D9DH-5tHSLJ_FT3GMqJLZxlxo8079snUhG6aGxBzGs7Ud5akVYmUBNVvDYmT1MAImSn5HyAMXjzEKm44H2wdNEBjR8RttNC93EjXYtKpF4=w400-h226-no" width=500"></img>
-</center>
+
+<p align="center">
+<img src="/Gif/SSD/ssd_portable.gif" width="500"  />
+</p>
+
 
 ## Semantic segmentation
 
-<center>
-<img align="center" src="https://lh3.googleusercontent.com/YWMdJqpXI4nf0CyNbKDnnBqKwwLG3K7de98_p9eGvY-ewZ6ADpnS3oeEAx2zOgG9qmnKT9Cp6uucqzNIlyh0Q-Vt-fWeTst9j9LgpJqa4EyHY7pgwddKeG7QQhRTzrTYOKnUWUtSNekWAJgtJp1niv_YnHuWH_mjqyBxC_bFJ8Xd89zUAKvDHLpmwTNKBbTUQI1VmAbs0t8HgV7x_wgJPZWteFKppkSinQ40o28vmYTansg6K3-90UDUR690ad8-8vPPmij4eAynJGACC6Ukn_dBIovprWItDCs4HZYOQVSuK1PC7Y_SHb3ND7NNvr1l8UdrBbqLzK1TWW_7FidzOwiS3fxoyITH18J8onu5afP62cr-SH4UWuZ0xp1fjpIyXwcAMvrjeoYY1DwzTfVqJEnp_OZgf8AYcTo802pV-II_jNPbwKKTD6JiXWJaswMoObVD9KV6DTxcihSaXEErHnXBKTunHeZXfmSleSzb_TrHLsdEMruX4IJOHWIraBMoFh-ey-hBV8xzAbC6_fhBe157UVUurm17l0EzNkxQPKwhlfIP_gwWFdc0NvRTnIXhzztGq5UVE1ebRpiqJl6aH6EacS6YpEtpzqA8cMQQWSuXpM1BUFKA_56BL9laxM2a7MAkrEuXGglUSn-4LCDx7A8J3UIF3VatPmxI1DPht_JZpNaECLyR=w500-h280-no" width=500"></img>
-</center>
-
+<p align="center">
+<img src="/Gif/SS/ss_portable.gif" width="500"  />
+</p>
 
 Semantic segmentation is the task of classifying each and very pixel in an image into a class as shown in the image below. Here you can see that all persons are blue, the road is purple, the vehicles are red, sidewalk are pink ....
 There are three levels of image analysis :
@@ -461,6 +462,33 @@ Thanks to the drone equipped by a camera, I have made several videos with 3 diff
 <img align="center" src="https://lh3.googleusercontent.com/8lQ9SGYeurwvrCnpjbo6eMchzcYFXHZK6bv94s2jN-y2yfyzKJlVqXRqhQ5Qn7eIbk1lSm-LqH4sKo3d4HMgm21FoMQykq6QFn_Jz7kZhVxHxPTTODxp0IuHYr09U7IB5kZ8mm3Tb9-4drcWgPYdcUjRv_4zalRyhCK34Q1ZVsFhIsKR3shSfutCS8VkIi7Otd933e0irtyS7W7LJ437YB7TguMpd-IK0K458DG2u9QVrskV0eOVnuCRyrjAoKqujQT6GrnFZ_4bHWLlU_ZCEN4D22SrS9QRIn8wPetzLxx7LMQMHP1ogHCIMvXx6G2_E7bGHAjgZSD5URojselNXELFESv_7ZVoGAjl4LtT_JqzyPK1w2znzimKXDPv81IM-Apcneg4vXHzZwFQWyVmu7slLMzwhXpcPMACBAz3lzbySQJ8wkoT_pUX81gBtvQhsnjZ_LJ-o82sNWxB4nlUt7xmfWctgRn2lK2P0OXCrM0PL5vRdVER-K73es81aGvCdd3F9MZ8dAzd6xZaei4TnYNeVQJ0dpmwJF0T2In9fnRf0YfVHH4gAgGEyHLyMSdsjLwrThu26bmNgLBNJDFMughzhPA-pZKLZ6KQ_vNBTnT_jHAtIqPcBDetbsCEfzvur7iXolVjoC47TDarb5UXeWCKqM8uigHk_nQEyCPawurnt0VCSJoZyZAFl5nqLOD1RNodCyFGtLboar8owcZXSxv5HC9MG7dDBdkFoOVil2l0_Q=w489-h562-no" width=300></img>
 </center>
 
+Because the SS and the SSD models were trained with a dataset with a view angle of 0° (pedestrian view), as the camera angle of view increases, the process degrades.
+
+#### Angle of view 10°
+<p align="center">
+  <img src="https://github.com/tcotte/Computer_vision_UC3M/blob/master/Gif/SS/out_video_74_SS.gif" width="400"  />
+  <img src="/Gif/SSD/10degrees_1.gif" width="400" /> 
+</p>
+
+With a view angle of 10°, the results are very good. There is a little bug in the SS process due to the road color. It exists also a lag in the SSD process, the process has trouble with overlapping cars.
+
+#### Angle of view 45°
+<p align="center">
+  <img src="/Gif/SS/45D.gif" width="400"  />
+  <img src="/Gif/SSD/45degrees.gif" width="400" /> 
+</p>
+
+With an angle of 45°, the results are not as good. The SS process does not detect the road. At several times, the SSD architecture the car detection with a chair. 
+This models were not trained with this view angle and it is not able to process with accuracy this images. The last videos will confirm this theory.
+
+#### Angle of view 90°
+<p align="center">
+  <img src="/Gif/SS/sentinel_mode.gif" width="400"  />
+  <img src="/Gif/SSD/90degrees_2.gif" width="400" /> 
+</p>
+
+With the "sentinel mode" (camera paralell to the floor), nothing is usable. 
+To conclude to this videos, we can say that we have to train our own models (for SS and SSD architectures) with this several view angles. The training will be difficult and we have to perform it with a big dataset but this is necesary to have trustworthy models.
 
 ## Obstacle problems formulation
 
@@ -481,10 +509,11 @@ Therefore, we can look into improve the Single-Shot-Detector model by creating o
 
 ## Conclusion
 
-To conclude, we can say that I have reached certain objectives, I have implement to machine learning models which are able to detect some obstacles on the Rasbperry Pi. Now, we have to go ahead creating our own model to detect classes we want to see. I suggest to train this model with Cityscape dataset because the drone will be drove at exterior. Meanwhile, it subsists a harware problem because the Rasbperry Pi and the NCS will not be able to detect all classes at 20 FPS.
+To conclude, we can say that I have reached certain objectives, I have implement to machine learning models which are able to detect some obstacles on the Rasbperry Pi. Now, we have to go ahead creating our own model to detect classes we want to see. I suggest to train this model with Cityscape dataset because the drone will be drove at exterior. Meanwhile, it subsists a hardware problem because the Rasbperry Pi and the NCS will not be able to detect all classes at 20 FPS.
 To solve this issue of time processing, I suggest to use another single board computer. I suggest to try firstly the Raspberry Pi 4 and the NCS 2. It will be better (around 8,5 FPS) but not powerful enough to handle the real-time processing. 
 We can check various alternative more powerful than the Raspberry Pi on this [link](https://qengineering.eu/computer-vision-with-raspberry-pi-and-alternatives.html).
- 
+
+ For our experimentation, the drone has to be completely autonomous. To succeed in this project, the drone must detect all obstacles for any angles of view. Therefore, it is necesary to train our own models with a dataset which contains various angles.
 
 ## Bibliography
 
