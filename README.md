@@ -195,8 +195,10 @@ We are going to go continue with a more interesting thing which is face detectio
   
 ## Machine learning  
   To introduce the concept of face detection, we must talk about the concepts of computer vision, artificial intelligence, machine learning, neural networks, and deep learning, which can be structured in a hierarchical way, as shown here :  
-  
-  !["machine learning IA hierarchy"](https://i.pinimg.com/originals/e1/1e/9f/e11e9f8166fd480c15ce33993c3c03a8.jpg)
+  <p align="center">
+<img align="center" src="https://i.pinimg.com/originals/e1/1e/9f/e11e9f8166fd480c15ce33993c3c03a8.jpg" width=600></img>
+</p>
+  !["machine learning IA hierarchy"]()
   
 **Machine Learning** is the process of programming computers to learn from historical data  
 to make predictions on new data. Machine Learning is a sub-discipline of artificial  
