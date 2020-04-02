@@ -19,11 +19,11 @@ We can understand the whole computer vision in this scheme :
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiXG5ncmFwaCBMUlxuICAgIEFbSW5wdXQgaW1hZ2VdLS0-QltNb2RlbF1cbiAgICBCIC0tPkMoQ2xhc3NlcylcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiXG5ncmFwaCBMUlxuICAgIEFbSW5wdXQgaW1hZ2VdLS0-QltNb2RlbF1cbiAgICBCIC0tPkMoQ2xhc3NlcylcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
 
-Recent developments in **neural networks** have greatly advanced the performance of **visual recognition systems**. Visual recognition tasks such as image classification, localization and detection are key components of computer vision. In this report, we are going to present several neural networks techniques which helped me to progress in my project. 
+Recent developments in **neural networks** have greatly advanced the performance of **visual recognition systems**. Visual recognition tasks such as image classification, localization and detection are key components of computer vision. In this report, we are going to present several neural networks architectures which helped me to progress in my project. 
 
 #### Computer vision technologies in Raspberry pi
 
-  To bring a computer vision system on a drone, we have to install system small and robust. A cheap idea is the utilisation of Raspberry Pi due to its size and its I/O on board which enables to integrate a camera and a SD card effortless. Rasbperry Pi use operating system such as Raspbian, a Debian-based distribution, so we are able to install Python and  other packages to developp our computer vision applications. But, to be realistic, a Raspberry Pi as fast alternative is unable to match the modern PCs.
+  To bring a computer vision system on a drone, we have to install system small and robust. A cheap idea is the utilisation of Raspberry Pi due to its size and its I/O on board which enables to integrate a camera and a SD card effortless. Rasbperry Pi uses operating system such as Raspbian, a Debian-based distribution, so we are able to install Python and  other packages to developp our computer vision applications. But, to be realistic, a Raspberry Pi as fast alternative is unable to match the modern PCs.
   
  ### Tools  
   
